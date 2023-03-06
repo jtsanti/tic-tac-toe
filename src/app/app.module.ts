@@ -10,6 +10,7 @@ import { NbThemeModule, NbLayoutModule, NbButtonModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PlayerPipe } from './pipes/player.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SquareComponent,
     BoardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PlayerPipe
   ],
   imports: [
     BrowserModule,

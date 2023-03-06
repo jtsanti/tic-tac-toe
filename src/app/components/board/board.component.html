@@ -1,7 +1,7 @@
 <div class="game-container">
     <h2>
-        <span *ngIf="!winner">Player: <span>{{ player }}</span>! It's your turn!</span>
-        <span *ngIf="winner">Player {{ player }} wins the game!</span>
+        <span *ngIf="!winner">Player {{ player | player}}! It's your turn!</span>
+        <span *ngIf="winner">Player {{ player | player }} wins the game!</span>
     </h2>
     
     <button 
