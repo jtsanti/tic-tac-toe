@@ -1,1 +1,10 @@
-{{ value }}
+<button *ngIf="!value" [disabled]="gameOver">
+    {{ value }}
+</button>
+
+<button 
+    nbButton 
+    *ngIf="value"
+    [status]="value == 'X' ? 'danger' : value == 'O' ? 'warning' : 'basic'" 
+    >{{ value }}
+</button>
