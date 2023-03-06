@@ -1,4 +1,7 @@
-<h1>Current Player: {{ player }}</h1>
+<h1>
+    <span *ngIf="!winner">Player: {{ player }}</span>
+    <span *ngIf="winner">Player {{ player }} wins the game!</span>
+</h1>
 
 <button 
     nbButton 
@@ -6,8 +9,6 @@
     (click)="newGame()"
     >Start New Game
 </button>
-
-<h2 *ngIf="winner">Player {{ player }} wins the game!</h2>
 
 <main>
     <app-square
