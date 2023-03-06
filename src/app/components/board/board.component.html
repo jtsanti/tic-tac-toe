@@ -1,0 +1,22 @@
+<div class="game-container">
+    <h2>
+        <span *ngIf="!winner">Player: <span>{{ player }}</span>! It's your turn!</span>
+        <span *ngIf="winner">Player {{ player }} wins the game!</span>
+    </h2>
+    
+    <button 
+        nbButton 
+        status="primary" 
+        (click)="newGame()"
+        >Start New Game
+    </button>
+    
+    <main>
+        <app-square
+            *ngFor="let val of squares; let i = index"
+            [value]="val"
+            (click)="makeMove(i)"
+            [gameOver]="gameOver"
+        ></app-square>
+    </main>
+</div>
